@@ -1,0 +1,62 @@
+/* Corazones */
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff77a9;
+  transform: rotate(-45deg);
+  animation: floatUp 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff77a9;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(-45deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) rotate(-45deg) scale(1.5);
+  }
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#yes {
+  background: #4caf50;
+  color: white;
+}
+
+button#no {
+  background: #f44336;
+  color: white;
+}
